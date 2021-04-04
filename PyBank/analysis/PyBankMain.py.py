@@ -37,4 +37,9 @@ with open(csvpath) as csvfile:
     for i in range(len(profitData)-1):
         monthProfitChange.append(profitData[i+1]-profitData[i])
 
-print(monthProfitChange)
+    def Average(monthProfitChange):
+        return sum(monthProfitChange) / len(monthProfitChange)
+
+    averageProfit = round(Average(monthProfitChange),2)
+print(averageProfit)
+    
