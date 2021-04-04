@@ -11,25 +11,23 @@ with open(csvpath) as csvfile:
     print(csvreader)
     # Read the header row first (skip this step if there is now header)
     csv_header = next(csvreader)
-    #print(f"CSV Header: {csv_header}")
+    print(f"CSV Header: {csv_header}")
 
-    netTotal = 0 
+    # Set lists to accept data from csv
+    totalMonths = []
+    netTotal = []
+    profitData = [] 
 
-    # Read each row of data after the header
+    # iterate through columns in csv and add to lists
     for row in csvreader:
-        print(row)
+        
+        #add months to totalMonths
+        totalMonths.append(row[0])
 
-        # calculate total number of months
-        totalMonths =  len(list(csvreader))
+        #add P/l 
+        profitData.append(int(row[1]))
 
-        # calc net total profit/loss 
-        netTotal += int(row[1])
 
-        # Calc Change in P/l for each month then take average over entire period
+    print(totalMonths)
 
-print("Financial Anlaysis:")
-print("----------------------------------------------")
-print(f"Net Total P/L: {netTotal}")
-print(f"Total Months: {totalMonths}")
-
-    
+    print(profitData)
