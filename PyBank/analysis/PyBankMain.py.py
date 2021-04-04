@@ -17,13 +17,19 @@ with open(csvpath) as csvfile:
 
     # Read each row of data after the header
     for row in csvreader:
-        #print(row)
+        print(row)
+
         # calculate total number of months
         totalMonths =  len(list(csvreader))
+
         # calc net total profit/loss 
         netTotal += int(row[1])
 
+        # Calc Change in P/l for each month then take average over entire period
+
+print("Financial Anlaysis:")
+print("----------------------------------------------")
 print(f"Net Total P/L: {netTotal}")
 print(f"Total Months: {totalMonths}")
 
-    #print(row)
+    
