@@ -14,20 +14,27 @@ with open(csvpath) as csvfile:
     print(f"CSV Header: {csv_header}")
 
     # Set lists to accept data from csv
-    totalMonths = []
-    netTotal = []
+    months = []
     profitData = [] 
+    monthProfitChange = []
 
     # iterate through columns in csv and add to lists
     for row in csvreader:
         
         #add months to totalMonths
-        totalMonths.append(row[0])
+        months.append(row[0])
 
-        #add P/l 
+        #add P/l data to profitData 
         profitData.append(int(row[1]))
 
+#print(Months)
+#print(profitData)
 
-    print(totalMonths)
+#Find number of months 
+    totalMonths = len(months)
+#print(totalMonths)
 
-    print(profitData)
+    for i in range(len(profitData)-1):
+        monthProfitChange.append(profitData[i+1]-profitData[i])
+
+print(monthProfitChange)
