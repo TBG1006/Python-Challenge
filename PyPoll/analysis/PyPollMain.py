@@ -72,7 +72,7 @@ print("----------------------------------------------")
 print(f'Khan: {khanPercent:.3F}% ({len(khanCount)})')
 print(f'Correy: {correyPercent:.3F}% ({len(correyCount)})')
 print(f'Li: {liPercent:.3F}% ({len(liCount)})')
-print(f"'OTooley: {otooleyPercent:.3F}% ({len(otooleyCount)})'")
+print(f"O'Tooley: {otooleyPercent:.3F}% ({len(otooleyCount)})")
 print(f'WINNER: {winner}')
 
 # Output Files
