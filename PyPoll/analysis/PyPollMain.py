@@ -21,10 +21,10 @@ with open(csvpath) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
 
-    print(csvreader)
+    #print(csvreader)
     # Read the header row first (skip this step if there is now header)
     csv_header = next(csvreader)
-    print(f"CSV Header: {csv_header}")
+    #print(f"CSV Header: {csv_header}")
 
     for row in csvreader:
 
@@ -47,25 +47,30 @@ totalVotes = len(voterIDList)
 #set dictionary to accept list values
 #pollDataDict = {"ID":0,"COUNTY":"Test","CANDIDATE":"Test"}
 
-#***********add list values to the dictionary 
-pollDataDict["Khan Votes"] = khanCount
-pollDataDict["Correy Votes"] = correyCount
-pollDataDict["Li Votes"] = liCount
-pollDataDict["O'Tooley Votes"] = otooleyCount
+#***********add list values to the dictionary *****not needed
+pollDataDict["Khan"] = khanCount
+pollDataDict["Correy"] = correyCount
+pollDataDict["Li"] = liCount
+pollDataDict["O'Tooley"] = otooleyCount
 
+winner = max(pollDataDict, key=pollDataDict.get)
+print(winner)
 khanPercent = len(khanCount) / totalVotes * 100
 correyPercent = len(correyCount) / totalVotes * 100
 liPercent = len(liCount) / totalVotes * 100
 otooleyPercent = len(otooleyCount) / totalVotes * 100
-print(khanPercent)  
-print(correyPercent) 
-print(liPercent)  
-print(otooleyPercent) 
+#print(khanPercent)  
+#print(correyPercent) 
+#print(liPercent)  
+#print(otooleyPercent) 
 
 
 print("Election Results:")
 print("----------------------------------------------")
 print(f'Total Votes: {totalVotes}')
 print("----------------------------------------------")
-#print(f'Khan: {}')
-#***********add list values to the dictionary *********I don't think I need any of this section
+print(f'Khan: {khanPercent:.3F}% ({len(khanCount)})')
+print(f'Khan: {correyPercent:.3F}% ({len(correyCount)})')
+print(f'Khan: {liPercent:.3F}% ({len(liCount)})')
+print(f'Khan: {otooleyPercent:.3F}% ({len(otooleyCount)})')
+print(f'WINNER: {winner}')
