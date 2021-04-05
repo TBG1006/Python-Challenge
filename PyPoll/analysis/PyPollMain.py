@@ -93,6 +93,6 @@ with open (output_path, 'w', newline='') as csvfile:
     csvfile.write("\n")
     csvfile.write(f'Li: {liPercent:.3F}% ({len(liCount)})')
     csvfile.write("\n")
-    csvfile.write(f"'OTooley: {otooleyPercent:.3F}% ({len(otooleyCount)})'")
+    csvfile.write(f"O'Tooley: {otooleyPercent:.3F}% ({len(otooleyCount)})")
     csvfile.write("\n")
     csvfile.write(f'WINNER: {winner}')
