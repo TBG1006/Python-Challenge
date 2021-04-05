@@ -64,7 +64,10 @@ with open(csvpath) as csvfile:
     
     print("Financial Anlaysis:")
     print("----------------------------------------------")
-    print(f"Total Months: {len(totalMonths)}")
+    print(f"Total Months: {totalMonths}")
     print(f"Net Total P/L: ${sum(profitData)}")
+    print(f"Average Change: ${averageProfit}")
+    print(f"Greatest Increase in Profits: {months[maxMonth]} (${maxProfitChange})")
+    print(f"Greatest Increase in Profits: {months[minMonth]} (${minProfitChange})")
     
 
