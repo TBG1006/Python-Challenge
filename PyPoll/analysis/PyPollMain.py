@@ -8,7 +8,10 @@ pollDataDict = {}
 voterIDList = []
 countyList = []
 candidateList = []
-
+khanCount = []
+correyCount = []
+liCount = []
+otooleyCount = []
 
 
 csvpath = os.path.join('PyPoll', 'Resources', 'PyPoll_Resources_election_data.csv')
@@ -28,20 +31,28 @@ with open(csvpath) as csvfile:
         voterIDList.append(int(row[0]))
         countyList.append(row[1])
         candidateList.append(row[2])
+    
+    for i in candidateList:
+        if i == "Khan":
+            khanCount.append(1)
+        elif i == "Correy":
+            correyCount.append(1)
 
+print(len(khanCount))  
+print(len(correyCount))           
 #print(voterIDList[8])
 #print(countyList[8])
 #print(candidateList[8])
 
-    #set dictionary to accept list values
-    pollDataDict = {"ID":0,"COUNTY":"Test","CANDIDATE":"Test"}
+#set dictionary to accept list values
+pollDataDict = {"ID":0,"COUNTY":"Test","CANDIDATE":"Test"}
 
-    #add list values to the dictionary
-    pollDataDict["ID"] = voterIDList
-    pollDataDict["COUNTY"] = countyList
-    pollDataDict["CANDIDATE"] = candidateList
+#add list values to the dictionary
+pollDataDict["ID"] = voterIDList
+pollDataDict["COUNTY"] = countyList
+pollDataDict["CANDIDATE"] = candidateList
 
-    totalVotes = len(voterIDList)
-    print(totalVotes)
+totalVotes = len(voterIDList)
+#print(totalVotes)
 
-    #print(f'{pollDataDict["CANDIDATE"][8]}')
+#print(f'{pollDataDict["CANDIDATE"][8]}')
