@@ -37,22 +37,27 @@ with open(csvpath) as csvfile:
             khanCount.append(1)
         elif i == "Correy":
             correyCount.append(1)
-
-print(len(khanCount))  
-print(len(correyCount))           
-#print(voterIDList[8])
-#print(countyList[8])
-#print(candidateList[8])
-
-#set dictionary to accept list values
-pollDataDict = {"ID":0,"COUNTY":"Test","CANDIDATE":"Test"}
-
-#add list values to the dictionary
-pollDataDict["ID"] = voterIDList
-pollDataDict["COUNTY"] = countyList
-pollDataDict["CANDIDATE"] = candidateList
+        elif i == "Li":
+            liCount.append(1)
+        elif i == "O'Tooley":
+            otooleyCount.append(1)
 
 totalVotes = len(voterIDList)
-#print(totalVotes)
 
-#print(f'{pollDataDict["CANDIDATE"][8]}')
+print(len(khanCount))  
+#print(len(correyCount)) 
+#print(len(liCount))  
+#print(len(otooleyCount))          
+
+
+#set dictionary to accept list values
+#pollDataDict = {"ID":0,"COUNTY":"Test","CANDIDATE":"Test"}
+
+#***********add list values to the dictionary *********I don't think I need any of this section 
+pollDataDict["Khan Votes"] = khanCount
+pollDataDict["Correy Votes"] = correyCount
+pollDataDict["Li Votes"] = liCount
+pollDataDict["O'Tooley Votes"] = otooleyCount
+
+print(f'{len(pollDataDict["Khan Votes"])}')
+#***********add list values to the dictionary *********I don't think I need any of this section
