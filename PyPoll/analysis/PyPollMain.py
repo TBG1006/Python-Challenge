@@ -44,20 +44,28 @@ with open(csvpath) as csvfile:
 
 totalVotes = len(voterIDList)
 
-print(len(khanCount))  
-#print(len(correyCount)) 
-#print(len(liCount))  
-#print(len(otooleyCount))          
-
-
 #set dictionary to accept list values
 #pollDataDict = {"ID":0,"COUNTY":"Test","CANDIDATE":"Test"}
 
-#***********add list values to the dictionary *********I don't think I need any of this section 
+#***********add list values to the dictionary 
 pollDataDict["Khan Votes"] = khanCount
 pollDataDict["Correy Votes"] = correyCount
 pollDataDict["Li Votes"] = liCount
 pollDataDict["O'Tooley Votes"] = otooleyCount
 
-print(f'{len(pollDataDict["Khan Votes"])}')
+khanPercent = len(khanCount) / totalVotes * 100
+correyPercent = len(correyCount) / totalVotes * 100
+liPercent = len(liCount) / totalVotes * 100
+otooleyPercent = len(otooleyCount) / totalVotes * 100
+print(khanPercent)  
+print(correyPercent) 
+print(liPercent)  
+print(otooleyPercent) 
+
+
+print("Election Results:")
+print("----------------------------------------------")
+print(f'Total Votes: {totalVotes}')
+print("----------------------------------------------")
+#print(f'Khan: {}')
 #***********add list values to the dictionary *********I don't think I need any of this section
