@@ -2,28 +2,6 @@
 
 ## Background
 
-Well... you've made it!
-
-It's time to put away the Excel sheet and join the big leagues. Welcome to the world of programming with Python. In this homework assignment, you'll be using the concepts you've learned to complete the **two** Python Challenges, PyBank and PyPoll.
-
-Both of these challenges encompass a real-world situation where your newfound Python scripting skills can come in handy. These challenges are far from easy so expect some hard work ahead!
-
-### Before You Begin
-
-* Create a new repository for this project called `python-challenge`. **Do not add this homework to an existing repository**.
-
-* Clone the new repository to your computer.
-
-* Inside your local git repository, create a directory for each Python Challenge. Use folder names corresponding to the challenges: **PyBank** and  **PyPoll**.
-
-* Inside of each folder that you just created, add the following:
-
-  * A new file called `main.py`. This will be the main script to run for each analysis.
-  * A "Resources" folder that contains the CSV files you used. Make sure your script has the correct path to the CSV file.
-  * An "analysis" folder that contains your text file that has the results from your analysis.
-
-* Push the above changes to GitHub or GitLab.
-
 ## PyBank
 
 ![Revenue](Images/revenue-per-lead.png)
@@ -89,13 +67,3 @@ Both of these challenges encompass a real-world situation where your newfound Py
   Winner: Khan
   -------------------------
   ```
-
-* In addition, your final script should both print the analysis to the terminal and export a text file with the results.
-
-## Hints and Considerations
-
-* Consider what we've learned so far. To date, we've learned how to import modules like `csv`; to read and write files in various formats; to store contents in variables, lists, and dictionaries; to iterate through basic data structures; and to debug along the way. Using what we've learned, try to break down your tasks into discrete mini-objectives. This will be a _much_ better course of action than spending all your time looking for a solution on Stack Overflow.
-
-* As you will discover, for some of these challenges, the datasets are quite large. This was done purposefully, as it showcases one of the limits of Excel-based analysis. While our first instinct, as data analysts, is often to head straight into Excel, creating scripts in Python can provide us with more robust options for handling "big data".
-
-* Write one script for each dataset provided. Run your script separately to make sure that the code works for its respective dataset.
